@@ -1,0 +1,83 @@
+#name,#pass,#email,#phn,#Address,#date{
+    margin: 5px;
+    padding: 5px;
+    border: 2px black solid;
+    border-radius: 10px;
+    height: 0.5cm;
+    width: 6cm;
+}
+#label{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    font-size: large;
+    margin: 10px;
+    padding: 30;
+}
+body{
+    margin-left: 400px;
+    margin-right: 300px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 5px;
+    background-image: url('annie-spratt-X4l3CjcDvic-unsplash.jpg');
+     background-size: cover;
+     background-repeat: no-repeat;
+}
+#code{
+    margin: 5px;
+    padding: 5px;
+    border: 2px black solid;
+    border-radius: 10px;
+    height: 0.9cm;
+    width: 2cm;
+}
+#age{
+    margin: 5px;
+    padding: 5px;
+    border: 2px black solid;
+    border-radius: 10px;
+    height: 0.5cm;
+    width: 2cm;
+}
+
+#select{
+    margin: 5px;
+    padding: 5px;
+    border: 2px black solid;
+    border-radius: 10px;
+    height: 0.9cm;
+    width: 4cm;
+}
+#gender{
+    margin-left: 5px;
+    padding: 30px;
+    border: 2px black solid;
+    border-radius: 10px;
+    height: 0.35cm;
+}
+
+#parent {
+    width: 100%;
+    height: 100px;
+    white-space: nowrap;
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+
+  .child {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+  }
+
+  #button{
+    border-radius: 15px;
+    margin-left: 50px;
+    margin-top: 40px;
+    height: 1cm;
+    width: 4cm;
+    color: rgb(108, 189, 212);
+  }
+
+
+

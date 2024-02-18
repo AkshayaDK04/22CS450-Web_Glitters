@@ -1,4 +1,129 @@
 <!DOCTYPE html>
 <html>
-    
+    <head>
+        <link rel='stylesheet' href="index.css"> 
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <legend id="label">Personalia</legend>
+                <label id="label">Name:</label>
+        <input type="name" id='name' placeholder="enter name.." required>
+        <br>
+        <label id="label">Email:</label>
+        <input type="email" id='email' placeholder="enter mail id.." required>
+        <br>
+        <label id="label">Password:</label>
+        <input type="password" id="pass" placeholder="enter password.." required>
+        <br>
+        <label id="label">Age:</label>
+        <input type="number" id="age" id='num' min='1' max='100'>
+        <br>
+        <label id="label">DOB</label>
+        <input type="date" id="date">
+        <br>
+        <label id="label">Phone no</label>
+        
+        <select id="code">
+            <option>+91</option>
+            <option>+91</option>
+            <option>+81</option>
+            <option>+71</option>
+        </select>
+        <label style="font-weight: bolder;">-</label>
+        <input type="text" id="phn" placeholder="enter phn no" required>
+        <br>
+        <label id="label">Address</label>
+        <textarea id="Address" row="4" column="50"></textarea>
+        <br>
+        <label id="label">Country</label>
+        <select id="select">
+            <option>India</option>
+            <option>India</option>
+            <option>India</option>
+            <option>India</option>
+            <option>India</option>
+            <option>India</option>
+            <option>India</option>
+            <option>India</option>
+            <option>India</option>
+            <option>India</option>
+            <option>India</option>
+            <option>India</option>
+            <option>India</option>
+            <option>India</option>
+        </select>
+        <br>
+        <label id="label">State</label>
+        <select id="select">
+            <option>India</option>
+            <option>India</option>
+            <option>India</option>
+            <option>India</option>
+            <option>India</option>
+            <option>India</option>
+            <option>India</option>
+            <option>India</option>
+            <option>India</option>
+            <option>India</option>
+            <option>India</option>
+            <option>India</option>
+            <option>India</option>
+            <option>India</option>
+        </select>
+        <br>
+        <label id="label">Gender</label>
+        <br>
+        <input type="radio" name="gender" id="gender">
+        <label id="label">Male</label>
+        <br>
+        <input type="radio" name="gender" id="gender">
+        <label id="label">Female</label>
+        <br>
+        <label id="label">Upload image</label>
+        <input type="file">
+            </fieldset>
+            
+        <fieldset>
+            <legend id="label">Preferance</legend>
+            <div id="parent">
+                <div class="child">
+                    <label id="label">Food Type </label>
+                    <br>
+                <input type="radio" name="type" value="Veg">
+                <label id="label">Veg</label>
+                <br>
+                <input type="radio" name="type" value="Non Veg">
+                <label id="label">Non Veg</label>
+                <br>
+                <input type="radio" name="type" value="Both">
+                <label id="label">Both</label>
+                </div>
+            
+            <div class="child">
+                <label id="label">Recommendation</label>
+                <br>
+                <label id="label">Chinese</label>
+                <input type="checkbox" name="recommend" value="Chinese">
+                <br>
+                <label id="label">Chinese</label>
+                <input type="checkbox" name="recommend" value="Chinese">
+                <br>
+                <label id="label">Chinese</label>
+                <input type="checkbox" name="recommend" value="Chinese">
+                <br>
+                <label id="label">Chinese</label>
+                <input type="checkbox" name="recommend" value="Chinese">
+                <br>
+            </div>
+           </div>
+        </fieldset>
+        <label id="label">Follow for more..!</label>
+        <p id="label">To get more recipes <span href="https://www.w3schools.com">Visit our channel</span>/> </p>
+        <a href="https://www.w3schools.com">Visit our channel</a>
+        <br>
+        <button type="submit" value="Submit" id="button">Submit</button>
+        <button type="reset" value="Reset" id="button">Reset</button>
+        </form>
+    </body>
 </html>
