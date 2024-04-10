@@ -1,4 +1,4 @@
-#name,#pass,#email,#phn,#Address,#date{
+#name,#pass,#email,#phn,#address,#date{
     margin: 5px;
     padding: 5px;
     border: 2px black solid;
@@ -6,6 +6,8 @@
     height: 0.5cm;
     width: 6cm;
 }
+
+
 #label{
     font-family: 'Times New Roman', Times, serif;
     font-weight: bolder;
@@ -13,13 +15,20 @@
     margin: 10px;
     padding: 30;
 }
+
+.first{
+  
+    display: flex;
+    gap: 10px; /* Adjust the space between elements as needed */
+  
+}
 body{
     margin-left: 400px;
     margin-right: 300px;
     margin-top: 50px;
     margin-bottom: 50px;
     padding: 5px;
-    background-image: url('annie-spratt-X4l3CjcDvic-unsplash.jpg');
+    background-image: url('WhatsApp Image 2024-02-06 at 10.11.14 PM.jpeg');
      background-size: cover;
      background-repeat: no-repeat;
 }
@@ -76,8 +85,22 @@ body{
     margin-top: 40px;
     height: 1cm;
     width: 4cm;
-    color: rgb(108, 189, 212);
+    background-color: ghostwhite;
+    color: rgb(15, 10, 18);
   }
 
+  #unm,#pd,#em,#pn,#ag,#dt,#ad{
+    color:red;
+  }
+
+  #imagebutton{
+    border-radius: 7px;
+    margin-left: 10px;
+    margin-top: 10px;
+    height: 0.5cm;
+    width: 3cm;
+    background-color: ghostwhite;
+    color: rgb(15, 10, 18);
+  }
 
 
