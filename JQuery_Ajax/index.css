@@ -1,0 +1,132 @@
+#name,#pass,#email,#phn,#address,#date{
+    margin: 5px;
+    padding: 5px;
+    border: 2px black solid;
+    border-radius: 10px;
+  
+    height: 0.5cm;
+    width: 6cm;
+}
+#panel, #flip {
+  padding: 5px;
+  text-align: center;
+  background-color: #ebc1c6;
+  border: solid 1px #e8c8c8;
+}
+
+#panel {
+  padding: 50px;
+  display: none;
+}
+
+#label{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    font-size: large;
+    margin: 10px;
+    padding: 30;
+}
+
+.first{
+  
+    display: flex;
+    gap: 10px; /* Adjust the space between elements as needed */
+  
+}
+body{
+    margin-left: 400px;
+    margin-right: 300px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 5px;
+    background-image: url('WhatsApp Image 2024-02-06 at 10.11.14 PM.jpeg');
+     background-size: cover;
+     background-repeat: no-repeat;
+}
+#code{
+    margin: 5px;
+    padding: 5px;
+    border: 2px black solid;
+    border-radius: 10px;
+    height: 0.9cm;
+    width: 2cm;
+}
+#age{
+    margin: 5px;
+    padding: 5px;
+    border: 2px black solid;
+    border-radius: 10px;
+    height: 0.5cm;
+    width: 2cm;
+}
+
+#show{
+  font-size: large;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bolder;
+  color: dimgrey;
+}
+
+#select{
+    margin: 5px;
+    padding: 5px;
+    border: 2px black solid;
+    border-radius: 10px;
+    height: 0.9cm;
+    width: 4cm;
+}
+#gender{
+    margin-left: 5px;
+    padding: 30px;
+    border: 2px black solid;
+    border-radius: 10px;
+    height: 0.35cm;
+}
+
+#parent {
+    width: 100%;
+    height: 100px;
+    white-space: nowrap;
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+
+  #next {
+    border: 50px black;
+    padding: 10px;
+    border-radius: 2px;
+    color:blue;
+    background-color: azure;
+    text-align: right;
+    }
+  .child {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+  }
+
+  #button{
+    border-radius: 15px;
+    margin-left: 50px;
+    margin-top: 40px;
+    height: 1cm;
+    width: 4cm;
+    background-color: ghostwhite;
+    color: rgb(15, 10, 18);
+  }
+
+  #unm,#pd,#em,#pn,#ag,#dt,#ad{
+    color:red;
+  }
+
+  #imagebutton{
+    border-radius: 7px;
+    margin-left: 10px;
+    margin-top: 10px;
+    height: 0.5cm;
+    width: 3cm;
+    background-color: ghostwhite;
+    color: rgb(15, 10, 18);
+  }
+
+

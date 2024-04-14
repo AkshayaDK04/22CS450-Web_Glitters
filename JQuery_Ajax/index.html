@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel='stylesheet' href="index.css">
+    <h1>Let's Register..!!</h1>
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+              $(document).ready(function(){
+            // Event handler for mouseover and mouseleave on labels
+            $("label").on("mouseover", function(){
+                $(this).css({
+                    "font-size": "xx-large"
+                });
+            });
+            $("label").mouseleave(function(){
+                $(this).css({
+                    "font-size": "large",
+                });
+            });
+            $(":radio").wrap("<span style='background-color:red'>");
+            $("#flip").click(function(){
+    $("#panel").slideDown("slow");
+  });
+  $("#flip").dblclick(function(){
+    $("#panel").slideUp("slow");
+  });
+            // Event handler for clicking on form inputs
+            $("#name,#pass,#email,#phn,#address,#date").click(function(){
+                $(this).css({                   "border": "5px grey solid"
+                });
+            });
+
+            // Event handler for showing and hiding details
+            $("#show").click(function() {
+        const myname = $('#name').val();
+        const mailid = $('#email').val();
+        const image = $('#imageInput')[0].files[0]; // Get the selected file
+        const reader = new FileReader();
+        const markup = `<li class="displaydetails">
+                            <h2>${myname}</h2>
+                            <img src="" alt="${myname}" width="150">
+                            <p><strong>Name:</strong> ${myname}</p>
+                            <p><strong>Mail-id:</strong> ${mailid}</p>     
+                        </li>`;
+
+        reader.onload = function(e) {
+            $('#list img').attr('src', e.target.result); // Update the image src
+        };
+
+        if ($('#show').text() == "Show my details:Click!!") {
+            $('#list').css({
+    "list-style-type": "none",
+    "border": "2px solid #ccc",
+    "border-radius": "6px",
+    "margin": "10px",
+    "padding": "20px",
+    "display": "flex",
+    "flex-wrap": "wrap",
+    "justify-content": "center",
+    "box-shadow": "0 4px 8px rgba(0, 0, 0, 0.1)"
+});
+            $('#list').html(markup).show(); // Show the list and set the markup
+            $('#list img').dblclick(function() {
+                $('#list img').fadeOut(); // Fade out the image on double click
+            });
+            $('#show').text("Hide my details:Click!!");
+        } else {
+            $('#list').html('').hide(); // Clear the list and hide it
+            $('#show').text("Show my details:Click!!");
+        }
+
+        reader.readAsDataURL(image); // Read the file as a data URL
+    });
+
+
+            // Reset styles on mouseleave for form inputs
+            $("#name,#pass,#email,#phn,#address,#date").mouseleave(function(){
+                $(this).css({
+                    "border": "2px black solid"
+                });
+            });
+
+            // Add background color on focus and remove on blur for form inputs
+            $("#name,#pass,#email,#phn,#address,#date").focus(function(){
+                $(this).css("background-color", "#cccccc");
+            });
+            $("#name,#pass,#email,#phn,#address,#date").blur(function(){
+      
+
+                $(this).css("background-color", "white");
+            });
+        });
+    </script>
+</head>
+    <body>
+        <div id="flip"><b>Click to know About us - Vintage Recipes</b></div>
+<div id="panel">Vintage Recipe Book is a curated collection of timeless culinary treasures, offering a diverse array of traditional recipes from around the globe. Delve into our culinary journey to discover comforting classics, exotic delicacies, and the stories behind each dish. Whether you're a seasoned chef or a novice cook, join us in savoring the flavors of the past and embarking on a delicious adventure through time and taste.</div>
+        <form onsubmit="check()">
+            <fieldset>
+                <legend id="label">Personalia</legend>
+                    <label id="label">Name :</label>
+        <input type="name" id='name' placeholder="NAME">
+        <br>
+                <label id="label">Email :</label>
+        <input type="email" id='email' placeholder="MAIL ID">
+        <br>
+        <label id="label">Password :</label>
+        <input type="password" id="pass" placeholder="PASSWORD">
+        <br>
+        <label id="label">Reenter Password :</label>
+        <input type="password" id="pass" placeholder="RE-PASSWORD">
+        <br>
+        <label id="label">Age :</label>
+        <input type="number" id="age" id='num' min='1' max='100'>
+        <br>
+        <label id="label">DOB :</label>
+        <input type="date" id="date">
+        <br>
+        <label id="label">Phone no :</label>       
+        <select id="code">
+            <option>+91</option>
+            <option>+91</option>
+            <option>+81</option>
+            <option>+71</option>
+        </select>
+        <label style="font-weight: bolder;">-</label>
+        <input type="text" id="phn" placeholder="PHN NO" >
+        <br>
+        <label id="label">Address</label>
+        <textarea id="address" rows="3" cols="30"></textarea>
+        <br>
+        <label id="label">Country</label>
+        <select id="select">
+            <option>India</option>
+            <option>China</option>
+            <option>USA</option>
+            <option>Russia</option>
+            <option>Ukraine</option>
+            <option>Singapore</option>
+            <option>Japan</option>
+            <option>Indonesia</option>
+            <option>Swedan</option>
+            <option>Denmark</option>
+            <option>Sri Lanka</option>
+            <option>Bangladesh</option>
+            <option>Pakistan</option>
+            <option>Afghanistan</option>
+        </select>
+        <br>
+        <br>
+        <label id="label">State</label>
+        <select id="select">
+            <option>TamilNadu</option>
+            <option>Kerala</option>
+            <option>Andra</option>
+            <option>Karnataka</option>
+            <option>Telungana</option>
+            <option>Haryana</option>
+            <option>Punjab</option>
+            <option>Kashmir</option>
+        </select>
+        <br>
+        <br>
+        <label id="label">Gender</label>
+        <br>
+        <br>
+        <input type="radio" name="gender" id="gender">
+        
+        <label id="label">Male</label>
+        <br>
+        <input type="radio" name="gender" id="gender">
+        <label id="label">Female</label>
+        <br>
+        <div id="genderError" style="color: red;"></div>
+        <br>
+        <label id="label">Upload image</label>
+        <br>
+        <br>
+        <input type="file" id="imageInput" accept=".jpg, .jpeg">
+    <br>
+    <br>
+    <button type="button" id="imagebutton"onclick="displayImage()">Display Image</button>
+    <br>
+    <img id="selectedImage" style="max-width: 150px; max-height: 150px;">
+    <p id="errorText" style="color: red;"></p>
+            </fieldset>
+            
+        <fieldset>
+            <legend id="label">Preferance</legend>
+            <div id="parent">
+                <div class="child">
+                    <label id="label">Food Type </label>
+                    <br>
+                    <input type="radio" name="type" value="Non Veg">
+                    <label id="label">Non Veg</label>
+                <br>
+                <input type="radio" name="type" value="Veg">
+                <label id="label">Veg</label>
+                <br>
+                <input type="radio" name="type" value="Both">
+                <label id="label">Both</label>
+                </div>
+            
+            <div class="child">
+                <label id="label">Recommendation</label>
+                <br>
+               
+
+                <label id="label">Chinese</label>
+                <input type="checkbox" name="recommend" value="Chinese">
+                <br>
+                <label id="label">Indian</label>
+                <input type="checkbox" name="recommend" value="Indian">
+                <br>
+                <label id="label">Swiss</label>
+                <input type="checkbox" name="recommend" value="Swiss">
+                <br>
+                <label id="label">Italian</label>
+                <input type="checkbox" name="recommend" value="Italian">
+                <br>
+            </div>
+           </div>
+        </fieldset>
+        <br>
+        <p id="show">Show my details:Click!!</p>
+        <ul id="list">
+        </ul>
+        <label id="label">Follow for more..!</label>
+        <p id="label">To get more recipes ....Click below</p>
+        <a href="https://www.w3schools.com"><b>Visit our channel - Vintage Recipe book</b></a>
+        <br>
+        <button type="submit" value="Submit" id="button" onclick="check()">Submit</button>
+        <button type="reset" value="Reset" id="button">Reset</button>
+       
+        <br>
+        <br>
+                <a href="http://127.0.0.1:5501/index.html" id="next" >Get Started</a>
+        </form>
+    </body>
+</html>
